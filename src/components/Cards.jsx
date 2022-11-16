@@ -5,7 +5,7 @@ export default function Cards(props) {
    const { characters } = props;
    return <div className= {e.divStyle}>
       {characters.map((element, index) => (
-         <span key = {index}>
+         <span key = {index} className= {e.divSpan}>
          <Card 
          name = {element.name}
          species={element.species}

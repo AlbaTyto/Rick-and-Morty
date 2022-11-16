@@ -1,5 +1,9 @@
 .divStyle {
-    display: flexbox;
-    flex-direction: column-reverse;
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: baseline;
+}
+.divSpan {
+    margin: 1%;
 }
