@@ -1,8 +1,9 @@
 import Card from './Card';
+import e from './Cards.module.css';
 
 export default function Cards(props) {
    const { characters } = props;
-   return <div>
+   return <div className= {e.divStyle}>
       {characters.map((element, index) => (
          <span key = {index}>
          <Card 

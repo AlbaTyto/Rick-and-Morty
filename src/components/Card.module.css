@@ -1,15 +1,18 @@
 .divStyle {
+    position: relative;
+    top: 20%;
+    left: 20%;
     display: flex;
     width: fit-content;
-    align-self: center;
     flex-direction: column-reverse;
-    flex-wrap: wrap;
-    margin: 10%;
+    align-items: center;
+    margin: 5%;
     padding: 1em;
-    color:rgb(90, 90, 147);
+    color:rgb(71, 71, 117);
     border: 4px solid rgb(55, 31, 78);
     border-radius: 5%;
     outline: groove rgb(104, 60, 144);
+    background-color: rgb(223, 198, 245) ;
 }
 .buttonStyle {
     color: white;
@@ -21,20 +24,27 @@
     border-radius: 20%;
     background-color: rgb(225, 49, 49);
 }
-.nameStyle {
-    margin: 0%;
-    padding: 10px;
+.nameStyle {    
+    position: absolute;
+    bottom: 22%;
+    height: fit-content;
+    width: fit-content;
+    padding: 3px;
     align-self: flex-start;
-    border: 2px dotted rgb(48, 48, 48);
-    background-color: rgb(144, 129, 102);
+    border: 2px dotted rgba(48, 48, 48, 0.7);
+    background-color: rgba(144, 129, 102, 0.9);
+    border-radius: 22px;
 }
     
 
-.attStyle {    
-    display: inline;
-    order: -1
+.attStyle { 
+    border: 1px rgb(144, 88, 88);
+    font-size: small;
+    margin: 0;
+    padding: 0;
+    display: flexbox;
+    flex-direction: row; 
 }
 .divStyle img {
-    display: flex;
     order: 1
 }
