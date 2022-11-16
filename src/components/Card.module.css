@@ -5,7 +5,7 @@
     flex-direction: column-reverse;
     align-items: center;
     margin: 5%;
-    padding: 1em;
+    padding: 1rem;
     color:rgb(32, 32, 75);
     border: 4px solid rgb(55, 31, 78);
     border-radius: 5%;
@@ -15,22 +15,22 @@
     background-color: chartreuse ;
 }
 .buttonStyle {
-    font-size: medium;
+    font-size: 13px;
     color: white;
-    margin: 2em;
+    margin: 1em 1em 2em 2em;
     order: 2;
     align-self: flex-end;
     width: fit-content;
     border: 1px solid black;
-    border-radius: 20%;
+    border-radius: 45%;
     background-color: rgb(225, 49, 49);
 }
 .nameStyle {    
     position: absolute;
-    bottom: 81px;
+    bottom: 3.5em;
     height: fit-content;
     width: fit-content;
-    padding: 5px;
+    padding: 0.2em;
     align-self: flex-start;
     border: 2px dotted rgba(48, 48, 48, 0.7);
     background-color: rgba(144, 129, 102, 0.9);
