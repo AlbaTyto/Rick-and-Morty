@@ -1,0 +1,42 @@
+.divStyle {
+    display: flex;
+    flex: 1 1 auto;
+    width: fit-content;
+    flex-direction: column-reverse;
+    align-self: center;
+    margin: 10%;
+    padding: 1em;
+    color:rgb(90, 90, 147);
+    border: 4px solid rgb(55, 31, 78);
+    border-radius: 5%;
+    outline: groove rgb(104, 60, 144);
+}
+.buttonStyle {
+    margin: 0;
+    width: fit-content;
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    border: 1px solid black;
+    border-radius: 20%;
+    background-color: rgb(225, 49, 49);
+}
+.nameStyle {
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    margin: 0%;
+    padding: 10px;
+    border: 2px dotted rgb(48, 48, 48);
+    background-color: rgb(144, 129, 102);
+}
+    
+
+.attStyle {    
+    display: flex;
+    align-self: flex-start;
+}
+.divStyle img {
+    display: flex;
+    align-items: center;
+}
