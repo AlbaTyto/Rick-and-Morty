@@ -1,13 +1,20 @@
+@font-face {
+  font-family: myRandMfont; 
+  /*https://betterstudio.com/fonts/rick-and-morty-font/#:~:text=Rick%20and%20Morty%20Use%20What,uppercase%2C%20lowercase%2C%20and%20numbers.*/
+  src: url(./font/get_schwifty.ttf);
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family:  myRandMfont; 
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family:  myRandMfont;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace; */
 }

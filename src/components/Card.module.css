@@ -2,22 +2,24 @@
     position: relative;
     display: flex;
     width: fit-content;
+    height: 28em;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: space-between;
     margin: 5%;
-    padding: 1rem;
+    padding: 4rem;
     color:rgb(32, 32, 75);
     border: 4px solid rgb(55, 31, 78);
-    border-radius: 5%;
+    border-radius: 50%;
     outline: groove rgb(104, 60, 144);
-    background-image:  url(/src/img/portal.jpg);
+    background-image:  url(/src/img/portal2.jpg);
     background-size: cover;
     background-color: chartreuse ;
 }
 .buttonStyle {
     font-size: 13px;
     color: white;
-    margin: 1em 1em 2em 2em;
+    margin: 0.6em 0.6em 2em 2em;
     order: 2;
     align-self: flex-end;
     width: fit-content;
@@ -27,7 +29,8 @@
 }
 .nameStyle {    
     position: absolute;
-    bottom: 3.5em;
+    margin: 1em 0em 0em 0em;
+    bottom: 5em;
     height: fit-content;
     width: fit-content;
     padding: 0.2em;
@@ -35,18 +38,22 @@
     border: 2px dotted rgba(48, 48, 48, 0.7);
     background-color: rgba(144, 129, 102, 0.9);
     border-radius: 22px;
+    z-index: 1;
 }
 
 .attStyle { 
-    width: 15rem;
-    font-size: small;
-    margin: 1em;    
+    width: 10rem;
+    font-size: x-small;
+    margin: 1em 1em 0em 1em;    
     display: flex;
     flex-direction: row; 
     justify-content: space-around;
     background-color: rgba(128, 128, 128, 0.7);
-    border-radius: 20%;
+    border-radius: 2%;
 }
 .divStyle img {
-    order: 1
+    order: 1;
+    border-radius: 45%;
+    opacity: 0.9;
+    z-index: 0;
 }
