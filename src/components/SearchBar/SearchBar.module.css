@@ -1,4 +1,5 @@
 .divStyle{
+    width: 35em;
     display:flex;
     align-items: center;
     justify-content: center;
