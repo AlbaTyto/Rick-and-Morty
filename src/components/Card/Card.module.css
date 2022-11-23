@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     width: fit-content;
-    height: 28em;
+    height: 23em;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
@@ -52,6 +52,7 @@
     border-radius: 2%;
 }
 .divStyle img {
+    width: 14em;
     order: 1;
     border-radius: 45%;
     opacity: 0.9;

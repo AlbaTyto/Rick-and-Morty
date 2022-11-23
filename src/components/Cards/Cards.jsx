@@ -1,11 +1,10 @@
-import Card from './Card';
+import Card from '../Card/Card.jsx';
 import e from './Cards.module.css';
 
-export default function Cards(props) {
-   const { characters } = props;
+export default function Cards({ characters }) {
    return <div className= {e.divStyle}>
-      {characters.map((element, index) => (
-         <span key = {index} className= {e.divSpan}>
+      {characters.map((element) => (
+         <span key = {element.id} className= {e.divSpan}>
          <Card 
          name = {element.name}
          species={element.species}

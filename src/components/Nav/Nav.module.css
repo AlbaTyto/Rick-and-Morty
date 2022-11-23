@@ -1,0 +1,16 @@
+.navStyle{
+    position: absolute;
+    margin: 25px;
+    top: 1em;
+    width: 97em;
+    height: fit-content;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+    opacity: .9;
+    padding: 1em;
+    border: 8px;
+    border-color: rgb(20, 20, 20);
+    border-style: outset;
+}

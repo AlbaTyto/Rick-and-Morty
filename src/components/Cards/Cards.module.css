@@ -1,8 +1,11 @@
 .divStyle {
+    margin-top: 10em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: baseline;
+    padding: 1em;
+    flex-wrap: wrap;
 }
 .divSpan {
     margin: 1%;
