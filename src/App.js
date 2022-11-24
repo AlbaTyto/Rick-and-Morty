@@ -4,6 +4,7 @@ import Nav from './components/Nav/Nav.jsx'
 import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import About from './components/About/About';
+import Detail from './components/Detail/Detail.jsx';
 
 function App() {
   const [characters, setChar] = useState([]);
@@ -31,7 +32,7 @@ function App() {
           characters={characters} onClose={onClose}
         />}/>
         <Route path='/about' element={<About />}/>
-        {/* <Route path="/detail/:detailId" element={<Detail />}/> */}
+        <Route path="/detail/:detailId" element={<Detail />}/>
       </Routes>
     </div>
   );

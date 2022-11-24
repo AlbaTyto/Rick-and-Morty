@@ -8,6 +8,7 @@ export default function Cards({characters, onClose}) {
          <span key = {index} className= {e.divSpan}>
          <Card 
          name = {element.name}
+         id = {element.id}
          species={element.species}
          gender={element.gender}
          image={element.image}
