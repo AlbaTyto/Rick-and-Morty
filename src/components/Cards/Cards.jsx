@@ -1,8 +1,8 @@
 import Card from '../Card/Card.jsx';
 import e from './Cards.module.css';
 
-export default function Cards(props) {
-   const { characters } = props;
+export default function Cards({characters, onClose}) {
+   // const { characters } = props;
    return <div className= {e.divStyle}>
       {characters.map((element, index) => (
          <span key = {index} className= {e.divSpan}>
@@ -11,7 +11,9 @@ export default function Cards(props) {
          species={element.species}
          gender={element.gender}
          image={element.image}
-         onClose = {() => window.alert('Emulamos que se cierra la card')} />
+         onClose={() => onClose(element.id)}
+         // onClose = {() => window.alert('Emulamos que se cierra la card')} 
+         />
          </span>
       ) 
       )}

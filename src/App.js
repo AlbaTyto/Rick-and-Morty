@@ -4,17 +4,33 @@ import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
 import { useState } from 'react';
 // import SearchBar from './components/SearchBar/SearchBar.jsx'
-import characters, { Rick } from './data.js'
+// import characters, { Rick } from './data.js'
 // const example = {
+//   id: 0,
 //   name: 'Morty Smith',
 //   species: 'Human',
 //   gender: 'Male',
 //   image: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
 // };
 
-function App () {
-const onSearch = (characterID) => {};
-// const [characters, setChar] = useState(example);
+function App() {
+
+  const [characters, setChar] = useState([]);
+  function onSearch(character) {
+    fetch(`https://rickandmortyapi.com/api/character/${character}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.name) {
+          setChar((oldChars) => [...oldChars, data]);
+        } else {
+          window.alert('No hay personajes con ese ID');
+        }
+      });
+  };
+  function onClose(id) {
+    setChar(characters.filter(char => char.id !== id));
+    // setChar(characters.splice(characters.indexOf(id), 1))=> Esta no funciuono
+  }
   return (
     <div className='App' style={{ padding: '25px' }}>
       {/* <div className='Present'>
@@ -29,7 +45,7 @@ const onSearch = (characterID) => {};
       <hr />
       <div>
         <Cards
-          characters={characters}
+          characters={characters} onClose={onClose}
         />
       </div>
       <hr />
@@ -39,7 +55,7 @@ const onSearch = (characterID) => {};
         />
       </div> */}
       <nav>
-        <Nav props = {onSearch}/>
+        <Nav onSearch={onSearch} characters={characters} setChar={setChar} />
       </nav>
     </div>
   )
