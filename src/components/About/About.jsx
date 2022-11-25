@@ -1,13 +1,13 @@
-// import a from './About.module.css';
+import a from './About.module.css';
 
 export default function About() {
     return (
-        <div>
-            <h3>About Rick & Morty's App.</h3>
+        <div className={a.Fondo}>
+            <h2>About Rick & Morty's App.</h2>
             <p>
                 This is a learning proyect from Soy Henry, in which we learn how to develop a React aplication/website.
             </p>
-            <h4>About the author</h4>
+            <h3>About the author</h3>
             <p>
                 My name is Gustavo Peretti, I'am from Salta-Argentina.
             </p>

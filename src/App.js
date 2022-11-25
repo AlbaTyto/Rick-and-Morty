@@ -27,6 +27,7 @@ function App() {
       <nav>
         <Nav path='/:nav' onSearch={onSearch} characters={characters} setChar={setChar} />
       </nav>
+      <div className='BodySubNav'>
       <Routes>
         <Route path='/home' element={<Cards
           characters={characters} onClose={onClose}
@@ -34,6 +35,7 @@ function App() {
         <Route path='/about' element={<About />}/>
         <Route path="/detail/:detailId" element={<Detail />}/>
       </Routes>
+      </div>
     </div>
   );
 };

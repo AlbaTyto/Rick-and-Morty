@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import d from './Detail.module.css';
 
-export default function Detail(props) {
+export default function Detail() {
 
-    const { detaiId } = useParams();
+    const { detailId } = useParams();
     const [character, setChar] = useState();
     useEffect(() => {
-        fetch(`https://rickandmortyapi.com/api/character/${detaiId}`)
+        fetch(`https://rickandmortyapi.com/api/character/${detailId}`)
             .then((response) => response.json())
             .then((char) => {
                 if (char.name) {
@@ -20,24 +20,26 @@ export default function Detail(props) {
                 window.alert('No hay personajes con ese ID');
             });
         return setChar({});
-    }, [detaiId]);
+    }, [detailId]);
 
     return (
-    <div>
-        {character ? (
-            <div>
-                <h1>{character.name}</h1>
-                <h5>{character.status}</h5>
-                <h5>{character.species}</h5>
-                <h5>{character.gender}</h5>
-                <h5>{character.origin?.name}</h5>
-                <div>
-                    <img src={character.image} alt={character.name} />
+        <div>
+            {character ? (
+                <div className={d.Info}>
+                    <h1 id={d.nombre}>{character.name}</h1>
+                    <div className={d.InfImg}>
+                        <img id={d.imagen} src={character.image} alt={character.name} />
+                    </div>
+                    <div className={d.InfoDet}>
+                        <h4>Estado: {character.status}</h4>
+                        <h4>Especie: {character.species}</h4>
+                        <h4>Sexo: {character.gender}</h4>
+                        <h4>Origen: {character.origin?.name}</h4>
+                    </div>                    
                 </div>
-            </div>
-        ) : (
-            ''
+            ) : (
+                ''
             )}
-    </div>
+        </div>
     )
 };
