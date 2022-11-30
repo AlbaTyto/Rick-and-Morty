@@ -1,9 +1,8 @@
 .Fondo{
-    height: 25em;
+    height: 38vh;
     padding: 6em;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 6em;
     flex-direction: row;
     justify-content: flex-start;
-
 }

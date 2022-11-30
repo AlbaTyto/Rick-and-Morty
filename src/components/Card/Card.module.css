@@ -2,12 +2,12 @@
     position: relative;
     display: flex;
     width: fit-content;
-    height: 23em;
+    height: 40vh;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
     margin: 1em;
-    padding: 4rem;
+    padding: 4em 3em 3em 3em;
     color:rgb(32, 32, 75);
     /* border: 4px solid rgb(55, 31, 78); */
     border-radius: 50%;
@@ -18,24 +18,27 @@
     box-shadow: 0px 0px 15px 5px chartreuse;
 }
 .buttonStyle {
-    padding: 8px;
-    font-size: 15px;
+    padding: 2px;
+    font-size: 10px;
     color: white;
     margin: 0.6em 0.6em 2em 2em;
     order: 2;
     align-self: flex-end;
     width: fit-content;
+    height: fit-content;
     border: 1px solid black;
     border-radius: 45%;
-    background-color: rgb(113, 66, 1);
+    background-color: rgba(255, 0, 0, 0.4);
 }
 .nameStyle {    
+    font-size:large;
     position: absolute;
-    margin: 1em 0em 0em 0em;
-    bottom: 5em;
-    left: 4rem;
+    margin: 2em 0em 0em 0em;
+    bottom: 16vh;
+    left: 2em;
     height: fit-content;
     width: fit-content;
+    max-width: 12vw;
     padding: 0.2em;
     border: 2px dotted rgba(48, 48, 48, 0.7);
     background-color: rgba(144, 129, 102, 0.9);
@@ -44,9 +47,9 @@
 }
 
 .attStyle { 
-    width: 10rem;
+    width: 7vw;
     font-size: x-small;
-    margin: 1em 1em 0em 1em;    
+    margin: 2em 1em 0em 1em;    
     display: flex;
     flex-direction: row; 
     justify-content: space-around;
@@ -54,7 +57,7 @@
     border-radius: 2%;
 }
 .divStyle img {
-    width: 14em;
+    width: 13vw;
     order: 1;
     border-radius: 45%;
     opacity: 0.9;

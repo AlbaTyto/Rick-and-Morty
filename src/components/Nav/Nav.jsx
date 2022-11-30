@@ -10,10 +10,11 @@ export default function Nav({onSearch, characters, setChar}) {
             <div id={n.Navlnk}>
             <Link to='/about'>About</Link>
             <Link to='/home'>Home</Link>
+            <Link to='/'>Logout</Link>
             </div>
             <div id={n.Bar}>
             <SearchBar onSearch = {onSearch} characters={characters} setChar={setChar}/>
             </div>
          </div>
    );
-}
+};

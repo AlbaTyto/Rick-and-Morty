@@ -1,26 +1,27 @@
 .Info{
-    height: 25em;
+    height: 55vh;
     display:flex;
-    padding: 6em;
+    padding: 6vh 20vw;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 6em;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
 
 }
 .InfoDet{
-    margin: 4em;
+    margin: 2em;
     text-align: left;
     align-self: flex-start;
 }
 .InfImg{
-    margin: 5em;
+    margin: 3em;
 }
 #imagen{
     border-radius: 5em;
     box-shadow: 0px 0px 16px white;
 }
 #nombre{
+    margin-top: 0;
     width:fit-content;
     position:absolute;
 }

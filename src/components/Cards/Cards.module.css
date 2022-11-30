@@ -1,5 +1,4 @@
 .divStyle {
-    margin-top: 10em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;

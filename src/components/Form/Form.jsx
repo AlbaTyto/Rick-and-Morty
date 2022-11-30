@@ -2,6 +2,7 @@ import React from 'react';
 import f from './Form.module.css';
 import validation from './validation';
 export default function Form(props) {
+    const login = props.login;
     const [userLog, setUserLog] = React.useState({
         username: '',
         password: ''
@@ -26,18 +27,18 @@ export default function Form(props) {
     };
     function handleSubmit(ev) {
         ev.preventDefault();
-        if (!Object.entries(logErrors).length) {
-            setUserLog({
-                username: '',
-                password: ''
-            });
-        setLogErrors(
-            validation({
-                username: [],
-                password: []
-            }));
-            console.log(userLog);
-            console.log(logErrors);
+        if (logErrors.username.length === 0 && logErrors.password.length === 0) {
+            if (login(userLog)) {
+                setUserLog({
+                    username: '',
+                    password: ''
+                });
+                setLogErrors(
+                    validation({
+                        username: [],
+                        password: []
+                    }))
+            } else alert('Los datos ingresados son incorrectos')
         } else alert("Debes completar los campos");
     }
     return (
@@ -50,7 +51,7 @@ export default function Form(props) {
                     id='name'
                     value={userLog.name}
                     onChange={handleInputChange} />
-                {logErrors.username.length>0 && <p> {logErrors.username} </p>}
+                {logErrors.username.length > 0 && <p className={f.Lerror}> {logErrors.username} </p>}
             </div>
             <div className={f.Pwd}>
                 <label style={{ margin: '1rem' }} htmlFor="password">Password</label>
@@ -60,7 +61,7 @@ export default function Form(props) {
                     name='password'
                     value={userLog.name}
                     onChange={handleInputChange} />
-                    {logErrors.password.length>0 && <p> {logErrors.password} </p>}
+                {logErrors.password.length > 0 && <p className={f.Lerror}> {logErrors.password} </p>}
             </div>
             <button type='submit' className={f.Login}>LOGIN</button>
         </form>

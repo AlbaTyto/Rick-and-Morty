@@ -8,7 +8,7 @@
    background-repeat: no-repeat;
    /* background-size: cover; */
    min-height: 100vh;
-   background-size: 100% 100%; 
+   background-size: 100vw; 
 }
 .Present{
    display: flex;
