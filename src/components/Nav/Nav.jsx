@@ -11,6 +11,7 @@ export default function Nav({onSearch, characters, setChar}) {
             <Link to='/about'>About</Link>
             <Link to='/home'>Home</Link>
             <Link to='/'>Logout</Link>
+            <Link to='/favorites'>❤️</Link>
             </div>
             <div id={n.Bar}>
             <SearchBar onSearch = {onSearch} characters={characters} setChar={setChar}/>

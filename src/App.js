@@ -3,9 +3,10 @@ import Cards from './components/Cards/Cards.jsx'
 import Nav from './components/Nav/Nav.jsx'
 import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import About from './components/About/About';
+import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
-import Form from './components/Form/Form';
+import Form from './components/Form/Form.jsx';
+import Favorites from './components/Favorites/favorites.jsx';
 
 function App() {
   const location = useLocation();
@@ -20,11 +21,12 @@ function App() {
     if (userData.username === username && userData.password === password) {
       setAccess(true);
       navigate('/home')
-    }
+       return true;      
+    } else return false
   };
   useEffect(() => {
     !access && navigate('/');
-  }, [access]);
+  }, [access, navigate]);
 
   // function logout() {
   //   navigate('/')
@@ -63,6 +65,7 @@ function App() {
           />} />
           <Route path='/about' element={<About />} />
           <Route path="/detail/:detailId" element={<Detail />} />
+          <Route path='/favorites' element={<Favorites />} />
         </Routes>
       </div>
     </div>

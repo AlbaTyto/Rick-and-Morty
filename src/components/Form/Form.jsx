@@ -1,6 +1,8 @@
 import React from 'react';
+
 import f from './Form.module.css';
 import validation from './validation';
+
 export default function Form(props) {
     const login = props.login;
     const [userLog, setUserLog] = React.useState({
