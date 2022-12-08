@@ -1,6 +1,6 @@
 // import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 
 // import s from './Card.module.css';
 import { addCharacter, deleteCharacter } from '../../redux/actions';
@@ -76,14 +76,15 @@ import s from './Card.module.css';
 
 export default function Card(props) {
    const [isFav, setFav] = useState(false);
+   const dispatch = useDispatch();
 
    function handleFavorite() {
       if (isFav) {
-         setFav(false)
-         deleteCharacter(props.id)
+         setFav(false);
+         dispatch(deleteCharacter(props.id))
       } else if (!isFav) {
-         setFav(true)
-         addCharacter(props)
+         setFav(true);
+         dispatch(addCharacter(props))
       };
    };
 
