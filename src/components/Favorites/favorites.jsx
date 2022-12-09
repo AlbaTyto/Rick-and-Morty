@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 export function Favorites({ myFavorites }) {
-    
+
     return <div>
         {myFavorites.map((element, index) => (
         <span key = {index}>
