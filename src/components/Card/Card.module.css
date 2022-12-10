@@ -2,12 +2,12 @@
     position: relative;
     display: flex;
     width: fit-content;
-    height: 40vh;
+    height: 32vh;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
     margin: 1em;
-    padding: 4em 3em 3em 3em;
+    padding: 3em 2em 2em 2em;
     color:rgb(32, 32, 75);
     /* border: 4px solid rgb(55, 31, 78); */
     border-radius: 50%;
@@ -31,10 +31,10 @@
     background-color: rgba(255, 0, 0, 0.4);
 }
 .nameStyle {    
-    font-size:large;
+    font-size: medium;
     position: absolute;
     margin: 2em 0em 0em 0em;
-    bottom: 16vh;
+    bottom: 14vh;
     left: 2em;
     height: fit-content;
     width: fit-content;
@@ -48,7 +48,7 @@
 
 .attStyle { 
     width: 7vw;
-    font-size: x-small;
+    font-size: small;
     margin: 2em 1em 0em 1em;    
     display: flex;
     flex-direction: row; 
@@ -57,7 +57,7 @@
     border-radius: 2%;
 }
 .divStyle img {
-    width: 13vw;
+    width: 10vw;
     order: 1;
     border-radius: 45%;
     opacity: 0.9;
@@ -68,6 +68,6 @@
     position:absolute;
     margin: 0;
     padding: 0;   
-    top: 5vh;
-    left: 5vw;
+    top: 3vh;
+    left: 2vw;
 }

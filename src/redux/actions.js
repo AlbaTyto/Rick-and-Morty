@@ -19,10 +19,10 @@ export function filterCards(gender) {
         payload: gender
     }
 };
-export function orderCards(id) {
+export function orderCards(value) {
     return {
         type: ORDER,
-        payload: id
+        payload: value
     }
 }
 

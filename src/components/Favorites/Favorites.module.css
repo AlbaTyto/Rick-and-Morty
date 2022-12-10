@@ -1,0 +1,36 @@
+#divStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1em;
+    flex-wrap: wrap;
+}
+
+.imgStyle {
+    width: 9vw;
+    height: fit-content;
+}
+
+.cardStyle {
+    background-color: darkslategray;
+    border: 1px solid black;
+    border-radius: 2em;
+    outline: 2px solid white;
+    width: 15vw;
+    height: 50vh;
+
+}
+
+.nameStyle {
+    margin: 0.5em;
+    color: darkblue;
+    font-size: small;
+}
+
+.attStyle {
+    display: flex;
+    padding: 1em;
+    font-size: small;
+    justify-content: space-around;
+}

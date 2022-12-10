@@ -6,7 +6,7 @@ const initialState = {
     allCharacters: []
 };
 
-export default function rootReducer (state = initialState, action) {
+export default function rootReducer(state = initialState, action) {
     switch (action.type) {
         case ADD_FAVORITE:
             // state.myFavorites.push(action.payload)
@@ -20,33 +20,38 @@ export default function rootReducer (state = initialState, action) {
             // const filterFav = state.myFavorites.filter((card)=>card.id !== action.payload)
             return {
                 ...state,
-                myFavorites: state.myFavorites.filter((card)=>card.id !== action.payload)
+                myFavorites: state.myFavorites.filter((card) => card.id !== action.payload)
             };
         case FILTER:
+            if (action.payload === "All") {
+                return {
+                    ...state,
+                    myFavorites: [...state.allCharacters]
+                }
+            }
             const fil = state.allCharacters.filter((char) => char.gender === action.payload);
             return {
                 ...state,
                 myFavorites: fil
             };
-            case ORDER:
-                const ord = state.allCharacters.sort((a, b)=>{
-                    if(action.payload === 'ascend') {
-                        if(a.id < b.id) return-1;
-                        if(a.id > b.id) return 1;
-                        return 0;
-                    } else {
-                        if(a.id < b.id) return 1;
-                        if(a.id > b.id) return -1;
-                        return 0;
-                    }
-                });
-                console.log(state.allCharacters);
-                console.log(ord);
-                return {
-                    ...state,
-                    myFavorites: ord
+        case ORDER:
+            const ord = state.allCharacters.sort((a, b) => {
+                console.log(action.payload);
+                if (action.payload === "Ascend") {
+                    if (a.id < b.id) return -1;
+                    if (a.id > b.id) return 1;
+                    return 0;
+                } else {
+                    if (a.id < b.id) return 1;
+                    if (a.id > b.id) return -1;
+                    return 0;
                 }
+            });
+            return {
+                ...state,
+                myFavorites: ord
+            }
         default:
-            return {...state};
+            return { ...state };
     }
 };
