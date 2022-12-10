@@ -6,8 +6,8 @@ import validation from './validation';
 export default function Form(props) {
     const login = props.login;
     const [userLog, setUserLog] = React.useState({
-        username: '',
-        password: ''
+        username: 'e@eee.ee',
+        password: '111111'
     });
 
     const [logErrors, setLogErrors] = React.useState({
