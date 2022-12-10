@@ -63,3 +63,11 @@
     opacity: 0.9;
     z-index: 0;
 }
+
+#favBtn{
+    position:absolute;
+    margin: 0;
+    padding: 0;   
+    top: 5vh;
+    left: 5vw;
+}

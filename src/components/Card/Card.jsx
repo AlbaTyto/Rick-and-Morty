@@ -15,7 +15,6 @@ export function Card(props) {
       };
    };
    useEffect(() => {
-      console.log(props.myFavorites);
       props.myFavorites.length>0 && props.myFavorites.forEach((fav) => {
          if (fav.id === props.id) {
             setFav(true);
@@ -25,6 +24,7 @@ export function Card(props) {
    }, [props.myFavorites]);
    return (
       <div className={s.divStyle}>
+         <div id={s.favBtn}>
          {
             isFav ? (
                <button onClick={handleFavorite}>❤️</button>
@@ -32,6 +32,7 @@ export function Card(props) {
                <button onClick={handleFavorite}>🤍</button>
             )
          }
+         </div>
          <button onClick={props.onClose} className={s.buttonStyle}>X</button>
          <Link to={`/detail/${props.id}`}><h2 className={s.nameStyle}>{props.name}</h2></Link>
          <div className={s.attStyle}>

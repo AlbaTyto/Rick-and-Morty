@@ -6,12 +6,9 @@ import { filterCards, orderCards } from "../../redux/actions";
 export function Favorites({ myFavorites }) {
     const dispatch = useDispatch();
 
-    function handleOrder(e){
-        dispatch( orderCards(e.terget.value) )
-    }
     return <div>
         <div>
-            <select name="order" onChange={handleOrder}>
+            <select name="order" onChange={(e) =>  dispatch(orderCards(e.terget.value))}>
                 <option value="ascend">Ascendente</option>
                 <option value="descend">Descendent</option>               
             </select>
