@@ -1,5 +1,5 @@
 .divStyle{
-    width: 35em;
+    width: 40vw;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +12,7 @@
 }
 .inputStyle{
     font-size: 25px;
+    width: 25vw;
     
 }
 .buttonStyle{

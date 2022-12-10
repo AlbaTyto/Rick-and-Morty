@@ -18,7 +18,7 @@
     border-radius: 2em;
     outline: 2px solid white;
     width: 15vw;
-    height: 50vh;
+    height: fit-content;
 
 }
 

@@ -47,6 +47,7 @@ export default function rootReducer(state = initialState, action) {
                     return 0;
                 }
             });
+            console.log(ord);
             return {
                 ...state,
                 myFavorites: ord
