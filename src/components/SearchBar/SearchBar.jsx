@@ -4,12 +4,13 @@ export default function SearchBar(props) {
    const { onSearch } = props;
    const [character, setCharacter] = React.useState('');
    const handleChange = (ev) => {
-      setCharacter(ev.target.value);
+      setCharacter(Number(ev.target.value));
+      
    };
    return (
       <div className= {f.divStyle}>
          <input className= {f.inputStyle} type='search' value={character} onChange={handleChange} />
-         <button className= {f.buttonStyle} onClick={() => onSearch(character)}>Agregar</button>
+         <button className= {f.buttonStyle} onClick={() => { onSearch(character); setCharacter('')}}>Agregar</button>
       </div>
    );
 }

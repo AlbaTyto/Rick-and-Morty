@@ -21,7 +21,7 @@ function App() {
     if (userData.username === username && userData.password === password) {
       setAccess(true);
       navigate('/home')
-       return true;      
+      return true;
     } else return false
   };
   useEffect(() => {
@@ -33,15 +33,21 @@ function App() {
   // }
 
   function onSearch(character) {
-    fetch(`https://rickandmortyapi.com/api/character/${character}`)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.name) {
-          setChar((oldChars) => [...oldChars, data]);
-        } else {
-          window.alert('No hay personajes con ese ID');
-        }
-      });
+    console.log(characters[0]?.id);
+    console.log(character);
+    if (characters.find(char => char.id === character)) {      
+      alert('Ya tienes ese personaje, escoge otro')
+    } else {
+      fetch(`https://rickandmortyapi.com/api/character/${character}`)
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.name) {
+            setChar((oldChars) => [...oldChars, data]);
+          } else {
+            window.alert('No hay personajes con ese ID');
+          }
+        });
+    }
   };
   function onClose(id) {
     setChar(characters.filter(char => char.id !== id));
