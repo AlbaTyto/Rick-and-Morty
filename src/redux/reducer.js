@@ -36,7 +36,6 @@ export default function rootReducer(state = initialState, action) {
             };
         case ORDER:
             const ord = state.allCharacters.sort((a, b) => {
-                console.log(action.payload);
                 if (action.payload === "Ascend") {
                     if (a.id < b.id) return -1;
                     if (a.id > b.id) return 1;
@@ -47,7 +46,6 @@ export default function rootReducer(state = initialState, action) {
                     return 0;
                 }
             });
-            console.log(ord);
             return {
                 ...state,
                 myFavorites: ord

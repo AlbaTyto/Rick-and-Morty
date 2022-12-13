@@ -6,10 +6,13 @@ import f from './Favorites.module.css'
 
 export function Favorites({ myFavorites }) {
     const dispatch = useDispatch();
-
+    function handleOrder(e) {
+        e.preventDefault();
+        dispatch(orderCards(e.target.value))
+    };
     return <div>
         <div>
-            <select name="order" onChange={(e) => dispatch(orderCards(e.target.value))}>
+            <select name="order" onChange={handleOrder}>
                 <option value="Ascend">Ascendente</option>
                 <option value="Descend">Descendente</option>
             </select>
