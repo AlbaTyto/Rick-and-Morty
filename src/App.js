@@ -7,10 +7,13 @@ import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
 import Form from './components/Form/Form.jsx';
 import Favorites from './components/Favorites/Favorites.jsx';
+import { useDispatch } from 'react-redux';
+import { deleteCharacter } from './redux/actions';
 
 function App() {
   const location = useLocation();
   const [characters, setChar] = useState([]);
+  const dispatch = useDispatch();
 
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
@@ -33,8 +36,6 @@ function App() {
   // }
 
   function onSearch(character) {
-    console.log(characters[0]?.id);
-    console.log(character);
     if (characters.find(char => char.id === character)) {      
       alert('Ya tienes ese personaje, escoge otro')
     } else {
@@ -51,6 +52,7 @@ function App() {
   };
   function onClose(id) {
     setChar(characters.filter(char => char.id !== id));
+    dispatch(deleteCharacter(id))
   };
   return (
     <div className='App' style={{ padding: '25px' }}>

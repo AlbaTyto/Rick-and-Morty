@@ -1,4 +1,4 @@
-import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } from "./types";
+import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER, RESTORE_FAVORITES } from "./types";
 
 export function addCharacter(personaje) {
     return {
@@ -25,4 +25,8 @@ export function orderCards(value) {
         payload: value
     }
 }
-
+export function restoreFavorites() {
+    return {
+        type: RESTORE_FAVORITES,
+    }
+};
