@@ -31,6 +31,7 @@
     font-size: medium;
     position: absolute;
     height: fit-content;
+    max-height: 7vh;
     width: fit-content;    
     max-width: 12vw;
     padding: 0.2em;
@@ -38,6 +39,7 @@
     background-color: rgba(144, 129, 102, 0.9);
     border-radius: 22px;
     z-index: 1;
+    overflow: hidden;
 }
 
 .attStyle { 
@@ -51,6 +53,7 @@
     justify-content: space-around;
     background-color: rgba(128, 128, 128, 0.7);
     border-radius: 2%;
+    overflow: hidden;
 }
 .divStyle img {
     grid-row: 1;
@@ -71,4 +74,5 @@
     top: 3vh;
     left: 2vw;
     border: 0;
+    font-size: larger;
 }
