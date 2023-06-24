@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { filterCards, orderCards } from "../../redux/actions";
 import f from './Favorites.module.css'
 
-
 export function Favorites({ myFavorites }) {
     const dispatch = useDispatch();
     function handleOrder(e) {

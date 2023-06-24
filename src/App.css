@@ -2,12 +2,12 @@
    display: flex;
    flex-direction: column;
    text-align: center;
-   background-image: url(./img/Back.png);
+   background-image: url(./img/cielo-estrellado_97.webp);
    background-color: #552066;
-   background-position: center;
+   background-attachment: fixed;
    background-repeat: no-repeat;
    /* background-size: cover; */
-   min-height: 100vh;
+   min-height: 92vh;
    background-size: 100vw; 
 }
 .Present{

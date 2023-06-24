@@ -24,17 +24,17 @@ export function Card(props) {
    }, [props.myFavorites]);
    return (
       <div className={s.divStyle}>
-         <div id={s.favBtn}>
+         <div id={s.favorite}>
          {
             isFav ? (
-               <button onClick={handleFavorite}>❤️</button>
+               <button onClick={handleFavorite} className={s.favBtn}>❤️</button>
             ) : (
-               <button onClick={handleFavorite}>🤍</button>
+               <button onClick={handleFavorite} className={s.favBtn}>🤍</button>
             )
          }
          </div>
          <button onClick={props.onClose} className={s.buttonStyle}>X</button>
-         <Link to={`/detail/${props.id}`}><h3 className={s.nameStyle}>{props.name}</h3></Link>
+         <Link to={`/detail/${props.id}`} style={{gridRow: '4'}}><h3 className={s.nameStyle}>{props.name}</h3></Link>
          <div className={s.attStyle}>
             <h4>{props.species}</h4>
             <h4>{props.gender}</h4>
